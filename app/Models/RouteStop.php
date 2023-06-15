@@ -1,12 +1,12 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
 
 class RouteStop extends Model
 {
-    protected $table = 'route_stops';
+    protected $table = 'route_stop';
 
     public function route()
     {
