@@ -2,18 +2,22 @@
 
 namespace Database\Factories;
 
-use App\Models\Stop;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
+/**
+ * @extends \Illuminate\Database\Eloquent\Factories\Factory<\App\Models\Stop>
+ */
 class StopFactory extends Factory
 {
-    protected $model = Stop::class;
-
+    /**
+     * Define the model's default state.
+     *
+     * @return array<string, mixed>
+     */
     public function definition()
     {
         return [
-            // Define your stop attributes here
-            'name' => $this->faker->city,
+            'name' => fake()->city(),
         ];
     }
 }
