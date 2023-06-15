@@ -14,9 +14,9 @@ Route::get('/stops/{stop?}', function ($stop = null) {
         $routes = RouteStop::where('stop_id', '=', $stop)->get();
         foreach ($routes as $route){
            $stop2 = RouteStop::where('route_id', '=', $route->route_id)->where('sort_order', '>', $route->sort_order)->get();
-            foreach ($stop2 as $shitstop){
-                $shit = $shitstop->stop;
-                array_push($array, $shit);
+            foreach ($stop2 as $desStop){
+                $busStop = $desStop->stop;
+                array_push($array, $busStop);
             }
             
         }
